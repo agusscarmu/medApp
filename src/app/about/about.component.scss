@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; // Ocupa toda la altura de la ventana
+  }
+  
+.title-cont{
+    width: 100%;
+    border-bottom: 2px solid #2a397c;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-cont{
+    margin-top: 1rem;
+}

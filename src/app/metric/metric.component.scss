@@ -1,0 +1,15 @@
+.chart-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bar {
+    background-color: #007bff; /* Color de las barras (azul) */
+    height: 20px; /* Altura base de las barras */
+    margin-bottom: 5px;
+  }

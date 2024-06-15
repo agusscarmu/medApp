@@ -1,0 +1,68 @@
+<!-- <div class="chart-container">
+    <div class="bar" style="height: 10%;"></div>
+</div> -->
+<div *ngIf="!covidData">
+    <app-spinner></app-spinner>
+</div>
+<div *ngIf="covidData">
+    <h3>Datos de COVID-19 por fecha</h3>
+    <hr>
+    <div>
+        <label for="selectDate">Selecciona una fecha:</label>
+        <select id="selectDate" (change)="onSelectDate($event)">
+            <option *ngFor="let date of getCovidDates()" [value]="date">{{ date }}</option>
+        </select>
+    </div>
+
+    <div *ngIf="selectedDate !== ''">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha seleccionada: {{ selectedDate }}</th>
+                    <th scope="col">Casos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-info">
+                    <th scope="row">Totales</th>
+                    <td>{{ selectedCases }}</td>
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">Curados</th>
+                    <td>{{ recovered }}</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">Fallecidos</th>
+                    <td>{{ deaths }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <h3>Datos de COVID-19 Argentina</h3>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Argentina</th>
+                <th scope="col">Casos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info">
+                <th scope="row">Totales</th>
+                <td>{{ covidArgentinaData.cases }}</td>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">Curados</th>
+                <td>{{ covidArgentinaData.recovered }}</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Fallecidos</th>
+                <td>{{ covidArgentinaData.deaths }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
