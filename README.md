@@ -6,7 +6,7 @@ MedApp es una aplicación que proporciona datos actualizados sobre la evolución
 
 #### Enlace al proyecto
 
-Es posible acceder al proyecto editable mediante [este link](https://stackblitz.com/~/github.com/agusscarmu/medApp/edit/angular-ivy-nn)
+Es posible acceder al proyecto editable mediante [este link](https://stackblitz.com/~/github.com/agusscarmu/medApp)
 
 ## Datos del alumno
 
