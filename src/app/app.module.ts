@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MetricComponent } from './metric/metric.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
@@ -23,7 +23,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     HttpClientModule 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

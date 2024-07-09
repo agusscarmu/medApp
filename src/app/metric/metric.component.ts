@@ -9,8 +9,8 @@ import { ArgentinaCovidDataService } from '../argentina-covid-data.service'; // 
 })
 export class MetricComponent implements OnInit {
 
-  covidData: any;
-  covidArgentinaData: any;
+  covidData: undefined | any;
+  covidArgentinaData: undefined | any;
   selectedDate: string = ''; 
   selectedCases: number | undefined; 
   deaths: number | undefined;
